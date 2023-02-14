@@ -13,7 +13,7 @@ This is a project for testing without affecting the source code of other project
 ### Application
 Clone this project to your local machine, **do NOT clone this project in the `work` folder!**
 ```bash
-git clone 
+git clone https://github.com/tszyaul6/playground-java.git
 ```
 
 cd into the project root directory, and build the containers

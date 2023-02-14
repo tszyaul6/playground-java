@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  playground:
+    container_name: playground
+    build: .
+    ports:
+      - "18080:8080"
+      - "18453:8453"
+    volumes:
+      - .:/app
+      - C:\Users\${USERNAME}\.m2:/root/.m2
+    working_dir: /app
+    tty: true
+    networks:
+      - playground_network
+    depends_on:
+      - mysql
+  
+  mysql:
+    container_name: playground_mysql
+    image: mysql:8.0
+    volumes:
+      - playground_volume:/var/lib/mysql
+    ports:
+      - "13306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: playground_db
+    networks: 
+      - playground_network
+  
+volumes:
+  playground_volume:
+
+networks:
+  playground_network:

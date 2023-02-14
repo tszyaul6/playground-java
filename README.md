@@ -4,9 +4,9 @@ Both the application and the mysql can be accessed in the local machine and the 
 and all changes will be synchronized at the same time.
 
 For example, the following can be both accessed in the container and the local machine.
-1. Source code of this project (local: ., container: /app)
-2. Dependencies used in this project (managed by maven, local: /User/${USERNAME}/.m2, container: /root/.m2)
-3. Mysql Database (local: localhost:13306, container: localhost:3306, see [Mysql](#mysql))
+1. Source code of this project (local: `.`, container: `/app`)
+2. Dependencies used in this project (managed by maven, local: `/User/${USERNAME}/.m2`, container: `/root/.m2`)
+3. Mysql Database (local: `localhost:13306`, container: `localhost:3306`, see [Mysql](#mysql))
 
 ## Prerequisite
 - [Git](https://git-scm.com/)
